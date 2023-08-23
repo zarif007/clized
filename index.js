@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
-import { exec, spawn } from "child_process";
+import { exec } from "child_process";
+import exportedCommands from "./exportedCommands.js";
 
 console.log("CLIZED Running...");
 
-const commands = ["git pull", "code ."];
+const commands = exportedCommands["code ."];
 
 exec(commands.join(" && "), (err, stdout, stderr) => {
   if (err) console.error("error:", stderr);

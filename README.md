@@ -1,3 +1,5 @@
 # clized
 
-`npm i -g clized`
+```bash
+npm i -g clized
+```
