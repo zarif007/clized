@@ -1,0 +1,24 @@
+{
+  "name": "clized",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "bin": {
+    "clized": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zarif007/cliz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zarif007/cliz/issues"
+  },
+  "homepage": "https://github.com/zarif007/cliz#readme"
+}
