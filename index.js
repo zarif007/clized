@@ -5,7 +5,7 @@ import boxSelector from "./boxSelector.js";
 import commandSelector from "./commandSelector.js";
 import cfonts from "cfonts";
 
-cfonts.say("CLIZED", {
+cfonts.say("CLIZED!", {
   font: "block",
   align: "left",
   colors: ["system"],
