@@ -1,5 +1,6 @@
 const exportedCommands = {
-  "code .": ["git pull", "code ."],
+  code: ["git pull", "code ."],
+  ls: ["ls"],
 };
 
-export default exportedCommands
+export default exportedCommands;

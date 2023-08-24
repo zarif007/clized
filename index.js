@@ -1,13 +1,25 @@
 #!/usr/bin/env node
 
-import { exec } from "child_process";
-import exportedCommands from "./exportedCommands.js";
+import chalk from "chalk";
+import boxSelector from "./boxSelector.js";
+import commandSelector from "./commandSelector.js";
+import cfonts from "cfonts";
 
-console.log("CLIZED Running...");
-
-const commands = exportedCommands["code ."];
-
-exec(commands.join(" && "), (err, stdout, stderr) => {
-  if (err) console.error("error:", stderr);
-  console.log(stdout);
+cfonts.say("CLIZED", {
+  font: "block",
+  align: "left",
+  colors: ["system"],
+  background: "transparent",
+  letterSpacing: 1,
+  lineHeight: 1,
+  space: true,
+  maxLength: "0",
+  gradient: ["blue", "red"],
+  independentGradient: false,
+  transitionGradient: false,
+  env: "node",
 });
+
+const selectedBox = await boxSelector();
+console.log(chalk.bgCyan(selectedBox));
+await commandSelector(selectedBox);

@@ -1,0 +1,4 @@
+{
+  "code": ["git pull", "code ."],
+  "ls": ["pwd", "ls", "node -v"]
+}
