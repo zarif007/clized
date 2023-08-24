@@ -1,4 +1,4 @@
-# clized
+# Clized
 
 ![Logo](https://i.ibb.co/NLfhVFc/Capfdffdture-removebg-preview.png)
 
