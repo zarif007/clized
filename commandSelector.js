@@ -1,17 +1,19 @@
 import chalk from "chalk";
-import { promisify } from "util";
 import fs from "fs";
 import inquirer from "inquirer";
 import path from "path";
-import { exec } from "child_process";
 import executeCommands from "./commandExecutor.js";
 import processCommands from "./utils/processCommands.js";
+import { fileURLToPath } from 'url';
 
-const execAsync = promisify(exec);
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const commandSelector = async (selectedBox) => {
-  const commandFolderPath = "./commands";
 
+  const commandFolderPath = path.join(__dirname, "commands");
+  
   try {
     if (selectedBox && fs.existsSync(commandFolderPath)) {
       const filePath = path.join(commandFolderPath, selectedBox);
