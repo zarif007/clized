@@ -1,0 +1,11 @@
+{
+  "install": [
+    "npm create vite@latest react-app -- --template react",
+    "cd react-app",
+    "npm install -D tailwindcss postcss autoprefixer",
+    "npx tailwindcss init -p",
+    "echo /** @type {import('tailwindcss').Config} */  export default { content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}',], theme: { extend: {}, }, plugins: [], } > tailwind.config.js",
+    "cd src && echo @tailwind base; @tailwind components;  @tailwind utilities; > index.css",
+    "npm run dev"
+  ]
+}

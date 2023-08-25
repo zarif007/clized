@@ -4,7 +4,6 @@ import chalk from "chalk";
 import boxSelector from "./boxSelector.js";
 import commandSelector from "./commandSelector.js";
 import cfonts from "cfonts";
-import runAndEnableScript from "./runAndEnableScript.js";
 
 cfonts.say("CLIZED!", {
   font: "block",
