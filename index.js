@@ -4,6 +4,7 @@ import chalk from "chalk";
 import boxSelector from "./boxSelector.js";
 import commandSelector from "./commandSelector.js";
 import cfonts from "cfonts";
+import { program } from "commander";
 
 cfonts.say("CLIZED!", {
   font: "block",
@@ -20,6 +21,17 @@ cfonts.say("CLIZED!", {
   env: "node",
 });
 
-const selectedBox = await boxSelector();
+program.option("-r, --cmd <type>", "Command");
+
+program.parse(process.argv);
+
+const options = program.opts();
+
+const givenBox = options?.cmd?.split(":")[0];
+const givenCommand = options?.cmd?.split(":")[1];
+
+const selectedBox = givenBox
+  ? `${givenBox}-commands.json`
+  : await boxSelector();
 console.log(chalk.bgCyan(selectedBox));
-await commandSelector(selectedBox);
+await commandSelector(selectedBox, givenCommand);
