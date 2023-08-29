@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/zarif007/cliz.git"
   },
-  "keywords": [],
+  "keywords": ["cli", "command", "bash", "terminal"],
   "author": "",
   "license": "ISC",
   "bugs": {

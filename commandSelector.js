@@ -33,11 +33,11 @@ const commandSelector = async (selectedBox, givenCommand) => {
           });
 
           commands = exportedCommands[answer["CommandSelector"]];
-          console.log(chalk.bgGreen("Running", answer["CommandSelector"]));
+          console.log(chalk.bgGreen(" Running", answer["CommandSelector"], ""));
         } else {
           if (Object.keys(exportedCommands).includes(givenCommand)) {
             commands = exportedCommands[givenCommand];
-            console.log(chalk.bgGreen("Running", givenCommand));
+            console.log(chalk.bgGreen(" Running", givenCommand, ""));
           } else {
             console.error("This command does not exists in this Box");
             return;

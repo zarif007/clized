@@ -33,5 +33,5 @@ const givenCommand = options?.cmd?.split(":")[1];
 const selectedBox = givenBox
   ? `${givenBox}-commands.json`
   : await boxSelector();
-console.log(chalk.bgCyan(selectedBox));
+console.log(chalk.bgCyan(` ${selectedBox} `));
 await commandSelector(selectedBox, givenCommand);
