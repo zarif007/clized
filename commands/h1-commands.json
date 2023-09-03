@@ -1,4 +1,5 @@
 {
   "code": ["git pull", "code ."],
-  "ls": ["pwd", "ls", "node -v", "cd boxes", "ls", "cd ..", "ls"]
+  "ls": ["pwd", "ls", "node -v", "cd boxes", "ls", "cd ..", "ls"],
+  "install": ["cd go", "npm create vite@latest"]
 }

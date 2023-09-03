@@ -2,9 +2,8 @@ import chalk from "chalk";
 import fs from "fs";
 import inquirer from "inquirer";
 import path from "path";
-import executeCommands from "./commandExecutor.js";
-import processCommands from "./utils/processCommands.js";
 import { fileURLToPath } from "url";
+import executeBashScript from "./executeBashScript.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -44,7 +43,7 @@ const commandSelector = async (selectedBox, givenCommand) => {
           }
         }
 
-        await executeCommands(processCommands(commands));
+        executeBashScript(commands)
       } else {
         console.error("The file does not exist");
       }
